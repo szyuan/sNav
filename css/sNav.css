@@ -1,0 +1,5 @@
+.sNav{background: #F99D9D; margin-top: 100px; height:60px; padding: 0;}
+.sNav>a{font-size:20px; list-style: none; float: left;  text-decoration: none; position: relative; font-weight:bold; overflow: hidden;}
+.sNav>a li{background:#6CD5DB; padding:0px 30px; text-align: center; color:white;}
+.sNav>a span{background:#FFB84B; text-align: center; color: white}
+.sNav>a span{display: block;}
