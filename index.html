@@ -7,16 +7,189 @@
 	<script src="js/sNav.js"></script>
 </head>
 <body>
+	<div id="header">
+		<img src="images/sNav.png" alt="" id="headImg">
+		<h1>sNav</h1>
+		<h2>这是一个简单的原生JavaScript插件，它可以用作导航栏，也可以作为按钮组，搭好结构后，只需要一些十分简单的设置即可让你的导航栏炫酷起来（兼容IE8及以上），简单好用，快来下载用起来吧。</h2>
+		<a href="#" id="headBtn">Download !</a>
+	</div>
+	
 	<ul class="sNav">
-		<a href="#"><li class="navItem" >书院asdasd是介绍</li></a>
-        <a href="#"><li class="navItem">书院框架</li></a>
-        <a href="#"><li>导师风采</li></a>
-        <a href="#"><li>要闻</li></a>
-        <a href="#"><li>公告通知</li></a>
-        <a href="#"><li>就业信息</li></a>
+		<a href="#"><li>sNav</li></a>
+        <a href="#"><li>导入sNav.js</li></a>
+        <a href="#"><li>搭建结构</li></a>
+        <a href="#"><li>执行语句</li></a>
+        <a href="#"><li>简单使用</li></a>
+        <a href="#"><li>sNav.js</li></a>
+        <a href="#"><li>sNav.min.js</li></a>
 	</ul>
+
+	<div id="part1"  class="part">
+		<h2>一句话使用sNav</h2>
+		<div class="partWrap">
+			<h3>1.导入sNav.js</h3>
+			<pre style="text-align:center;">&lt;script src="somewhere/js/sNav.js &gt; &lt;/script&gt;</pre>
+			<h3>2.将结构搭好</h3>
+			<pre class="p1pre1" style="font-size:18px;">
+	&lt;ul class="example1"&gt;
+
+		&lt;a href="#"&gt; &lt;li>HOME&lt;/li&gt; &lt;/a&gt;
+
+		&lt;a href="#"&gt; &lt;li&gt;COMMUNITY&lt;/li&gt; &lt;/a&gt;
+
+		&lt;a href="#"&gt; &lt;li>MUSIC&lt;/li&gt; &lt;/a&gt;
+
+		&lt;a href="#"&gt; &lt;li>PHOTOGRAPHY&lt;/li&gt; &lt;/a&gt;
+
+		&lt;a href="#"&gt; &lt;li>NEWS&lt;/li&gt; &lt;/a&gt;
+
+		&lt;a href="#"&gt; &lt;li>MESSAGE&lt;/li&gt; &lt;/a&gt;
+
+		&lt;a href="#"&gt; &lt;li>NOTICE&lt;/li&gt; &lt;/a&gt;
+
+	&lt;/ul&gt;
+			</pre>
+			<pre class="p1pre1" id="p1pre1Right">
+				<strong>
+	.sNav{
+		background: rgb(0, 216, 224); 
+		height: 60px; 
+		padding: 0;
+		margin: 0 auto; 
+		width: 1059px;
+	}
+	.sNav>a{
+		font-size: 20px;
+		list-style: none;
+		float: left;
+		text-decoration: none;
+		position: relative;
+		font-weight: bold;
+		overflow: hidden;
+	}
+	.sNav>a li{
+		background: rgb(0, 216, 224);
+		padding: 0px 30px;
+		text-align: center;
+		color: white;
+		height: 60px;
+		line-height:60px;
+	}
+	.sNav>a span{
+		background: #FFB739;
+		text-align: center;
+		color: white;
+		display: block;
+	}
+				</strong>			
+			</pre>
+		</div>
+		<ul class="example1">
+			<a href="#"><li>HOME</li></a>
+	        <a href="#"><li>COMMUNITY</li></a>
+	        <a href="#"><li>MUSIC</li></a>
+	        <a href="#"><li>PHOTOGRAPHY</li></a>
+	        <a href="#"><li>NEWS</li></a>
+	        <a href="#"><li>MESSAGE</li></a>
+	        <a href="#"><li>NOTICE</li></a>
+		</ul>
+		<h3 id="p1h2">3.只需执行这条语句</h3>
+		<pre id="p1pre2">var example1 = new sNav('example1');<button id="example1Btn">点击执行这条语句</button></pre>
+		<h3 id="p1h3">3.再把鼠标移上去看看</h3>
+		<img id="part1arrow" src="images/arrow.png" height="300" width="200px" alt="" />
+	</div>
+	<div id="part2" class="part">
+		<h2>sNav的设置</h2>
+		<div class="row">
+			<div class="left">
+				<h4>设置原按钮样式</h4>
+				<p>原按钮的样式设置，取决于对ul下的a和li的设置。需要设置好浮动、元素宽度、高度、填充、背景、行高等属性</p>
+			</div>
+			<div class="right">
+				<pre>
+.example2 { height:60px; margin: 20px auto; width:1059px; }
+
+.example2 > a { font-size:20px; list-style: none; float:left;  text-decoration: none;
+		position: relative; font-weight:bold; overflow: hidden; }
+
+.example2 > a li { background:rgb(0, 216, 224); padding:0px 30px; text-align: center;
+		color:white; height: 60px; line-height:60px; }</pre>
+			</div>
+		</div>
+		<div class="row">
+			<div class="left">
+				<h4>设置hover时按钮的样式</h4>
+				<p>设置hover时滑入的按钮样式，只需要为设置a下的span添加样式，通常只需要设置背景颜色和文字大小颜色</p>
+			</div>
+			<div class="right">
+				<pre>
+.example2 > a span { background:#FFB739; text-align: center; color: white; }
+				</pre>
+			</div>
+		</div>
+		<div class="row">
+			<div class="left">
+				<h4>设置特殊的移入文字效果</h4>
+				<p>如果你不想让移入效果一成不变，你可以通过这个方法，自定义设置移入元素内的文字</p>
+			</div>
+			<div class="right">
+				<pre>example2.setText({
+	"1":"abc",
+	"4":"hehe"
+});</pre>
+			</div>
+		</div>
+		<div class="row">
+			<div class="left">
+				<h4>设置效果预览</h4>
+				<div class="example2wrap">
+					<ul class="example2">
+						<a href="http://www.szy321.com/fruits/sNav"><li>sNav.js</li></a>
+				        <a href="http://www.szy321.com/fruits/sHover"><li>sHover</li></a>
+				        <a href="http://www.szy321.com/"><li>我的博客</li></a>
+					</ul>		
+				</div>
+			</div>
+			<script>
+			var example2=new sNav('example2');
+			example2.setText({
+				"0":"下载(3.2k)",
+				"1":"查看详情",
+				"2":"去逛逛"
+			});
+			</script>
+			<div class="right">
+				<pre>example1.setText({
+	"0":"下载(3.2k)",
+	"1":"查看详情",
+	"2":"去逛逛"
+});</pre>
+			</div>
+		</div>
+		<div class="footer">
+				<h1>sNav</h1>
+				<h2>还有更多有趣的用法,赶紧下载来试用一下吧！</h2>
+				<h3>觉得不错就在GitHub上点个赞★哦</h3>
+				<img src="images/gitHub.png" id="gitHubIcon" alt="gitHub">
+				<div class="downloadBtn">
+					<a href="https://github.com/szYuan/sHover/blob/master/js/sHover.js"><button id="downloadMin">下载压缩版（3.6KB）</button></a>
+					<a href="https://github.com/szYuan/sHover/blob/master/js/sHover.min.js"><button id="download">下载源码（5.6KB）</button></a>
+					<a href="https://github.com/szYuan/sHover">下载实例</a>
+				</div>	
+			</div>
+	</div>
 </body>
 <script>
 	var sNav1=new sNav('sNav');
+	sNav1.setText({
+		"5":"下载",
+		"6":"下载"
+	});
+
+	//-------------------------
+	var example1Btn=document.getElementById('example1Btn');
+	example1Btn.onclick=function(){
+		var example1=new sNav('example1');
+	}
 </script>
 </html>

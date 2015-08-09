@@ -3,9 +3,9 @@
 		//获得所有sNav
 		var oNav=_this.getByClass(document,NavClass)[0];
 		var aItem=oNav.getElementsByTagName('li');
-		var aA=oNav.getElementsByTagName('a');
-		var i=1;
-		for (var i = 0; i < aItem.length; i++) {
+		this.aHoverItem=[];
+		this.aA=oNav.getElementsByTagName('a');
+		for (var i =0; i < aItem.length; i++) {
 			//获取原Item样式
 			var itemWidth=aItem[i].offsetWidth;
 			var itemHeight=oNav.offsetHeight;
@@ -15,14 +15,13 @@
 				'bottom':_this.getStyle(aItem[i],'paddingBottom'),
 				'left':_this.getStyle(aItem[i],'paddingBottom')
 			};
-			
-			
+						
 			var oHoverItem=document.createElement('span');
+			this.aHoverItem.push(oHoverItem);
 		
-
 			//创建滑动容器并设置好位置
 			var itemWrap=document.createElement('div');
-			aA[i].appendChild(itemWrap);
+			this.aA[i].appendChild(itemWrap);
 			itemWrap.appendChild(oHoverItem);
 			itemWrap.appendChild(aItem[i]);
 
@@ -30,8 +29,8 @@
 			itemWrap.style.position='absolute';
 			itemWrap.style.background='yellow';
 			//最外层容器占位
-			aA[i].style.width=itemWidth+'px';
-			aA[i].style.height=itemHeight+'px';
+			this.aA[i].style.width=itemWidth+'px';
+			this.aA[i].style.height=itemHeight+'px';
 			//设置itemWrap的Top值
 			itemWrap.style.top=-itemHeight+'px';
 			//传递参数-滑动距离
@@ -56,13 +55,19 @@
 				});
 			}
 			eventRegister(itemWrap);
-
-			//默认参数设置
-			this.slideSpeed=8;
+			
 		}	
+		//默认参数设置
+		this.slideSpeed=8;
+	}
+	
+	sNav.prototype.setText=function(json){
+		//设置hoverItem内容
+		for (var i in json) {
+			this.aHoverItem[i].innerHTML=json[i];
+		};
 	}
 
-	
 	sNav.prototype.hoverIn=function(ev,itemWrap){
 		// alert(this.getStyle(itemWrap,'top'));
 		this.startMove(itemWrap,{'top':0});

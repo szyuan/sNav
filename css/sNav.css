@@ -1,5 +1,65 @@
-.sNav{background: #F99D9D; margin-top: 100px; height:60px; padding: 0;}
-.sNav>a{font-size:20px; list-style: none; float: left;  text-decoration: none; position: relative; font-weight:bold; overflow: hidden;}
-.sNav>a li{background:#6CD5DB; padding:0px 30px; text-align: center; color:white;}
-.sNav>a span{background:#FFB84B; text-align: center; color: white}
-.sNav>a span{display: block;}
+
+.sNav{height:60px; margin: 20px auto; width:1059px;}
+.sNav>a{font-size:20px; list-style: none; float:left;  text-decoration: none; position: relative; font-weight:bold; overflow: hidden;}
+.sNav>a li{background:rgb(0, 216, 224); padding:0px 30px; text-align: center; color:white; height: 60px; line-height:60px;}
+.sNav>a span{background:#FFB739; text-align: center; color: white;}
+
+/*example1*/
+.example1{height:60px; padding: 0;margin:0 auto; width:1060px;}
+.example1>a{font-size:20px; list-style: none; float:left;  text-decoration: none; position: relative; font-weight:bold; overflow: hidden;}
+.example1>a li{background:rgb(108, 150, 180); padding:0px 30px; text-align: center; color:white; height: 60px; line-height:60px;}
+.example1>a span{background:#FFA683; text-align: center; color: white;display: block;}
+
+/*example2*/
+.example2{height:60px; padding: 0;margin:0 auto; width:1060px;}
+.example2>a{font-size:20px; list-style: none; float:left;  text-decoration: none; position: relative; font-weight:bold; overflow: hidden;}
+.example2>a li{background:rgb(0, 216, 224); padding:0px 30px; text-align: center; color:white; height: 60px; line-height:60px;}
+.example2>a span{background:#FFB739; text-align: center; color: white;display: block;}
+
+/*---------------------------------------------------*/
+body{margin: 0;padding: 0;}
+
+#header{height: 450px; text-align: center; text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);background: #FFFCED; margin: 0; overflow: hidden;}
+#header h1{font-size: 50px; margin:0; text-align:center; padding:0;}
+#headImg{margin: 40px auto 20px; display: block;}
+#header h2{font-size: 20px; max-width: 900px; padding:0; font-weight: normal; margin:30px auto 0; line-height: 1.5em; color: #555;}
+#headBtn{padding:10px; background:#E04E5E; border-radius: 10px; text-decoration: none; font-family: "arial"; color: white; position: relative; top:20px; font-style: 20px;}
+#headBtn:hover{background:#FF5F5F }
+/*---------part1---------*/
+pre{ background:#FF7676 ; color: white; padding:20px; border-radius: 10px; font-family: 'Comic Sans MS'; font-size:14px;}
+pre strong { color: #239CBD; font-weight: normal;}
+#part1{background:#ECFCFF; min-height: 400px; position: relative;}
+.part h2{color:#555; font-size: 30px; padding:30px 30px 0; text-align: center;}
+.part h3{color:#004666; margin: 30px; text-align: center; clear: both;}
+.partWrap{width: 1060px; margin:20px auto;}
+#part1 .example1{ clear: both; }
+.p1pre1{width: 450px; float: left;}
+#p1pre1Right{float: right;}
+#p1pre2{width: 300px; margin:10px auto; position: relative; border-radius:10px 10px 0 0; margin-bottom: 50px; text-align: center;}
+#p1pre2 button{width:340px; height:61px; position:absolute; right:-100px; top:61px; border: none; left: 0; border-radius:0 0 10px 10px; background: powderblue;  font-size: 20px; font-weight: bold; color:firebrick; font-family: 'arial'; border-bottom: 10px solid #8FDBE6 ;}
+#p1pre2 button:hover{background:#9FEDEB;}
+#part1arrow{display:none;position:absolute; top:460px; left: 400px;}
+#p1h3{padding: 30px;}
+
+/*--------part2--------*/
+#part2{}
+.row{overflow: hidden; width: 80%; margin: 10px auto;}
+.row .left{float: left; width: 50%; text-align: center;}
+.row .left p{padding-right:20px;}
+.row .left h4{font-size: 18px; color:#FF7676;}
+.row .right{float: left; width: 50%;}
+.example2wrap{width: 420px; margin:-10px auto;}
+.example2{margin-left: 20px; float: left;}
+.example2 .intro2{background:#F08787;}
+.example2prev{ margin-left:0; float: left; width: 200px; height: 100px; background:#CCC;}
+.intro2prev{background:#F08787;}
+
+/*---------------------------------*/
+.footer{min-height: 300px; margin-top:50px; background:#FFBEBE; padding-bottom: 50px; text-align: center;}
+.footer h1{font-size: 60px; color: white; margin:0; padding-top:50px; text-align: center; text-shadow:0 3px 5px #888;}
+.footer h2{text-align: center; padding:10px 0 0; color:#2D8AB1; }
+.footer h3{text-align: center; padding:0px; color:#555; font-weight: normal; }
+#gitHubIcon{width: 90px;height: 90px;}
+.downloadBtn button{padding:8px; font-size: 18px; color:#26677B; font-weight: bold; font-family: "Arial"; background:powderblue; border:none; border-radius: 10px; border-bottom:4px solid #62CBD8}
+.downloadBtn button:hover{background:#99E1FF;}
+.downloadBtn a{font-weight: bold; font-family: "Arial"; font-size: 18px; text-decoration: none; color:#26677B;}
