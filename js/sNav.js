@@ -9,12 +9,6 @@
 			//获取原Item样式
 			var itemWidth=aItem[i].offsetWidth;
 			var itemHeight=oNav.offsetHeight;
-			var itemPadding={
-				'top':_this.getStyle(aItem[i],'paddingTop'),
-				'right':_this.getStyle(aItem[i],'paddingRight'),
-				'bottom':_this.getStyle(aItem[i],'paddingBottom'),
-				'left':_this.getStyle(aItem[i],'paddingBottom')
-			};
 						
 			var oHoverItem=document.createElement('span');
 			this.aHoverItem.push(oHoverItem);
@@ -69,7 +63,6 @@
 	}
 
 	sNav.prototype.hoverIn=function(ev,itemWrap){
-		// alert(this.getStyle(itemWrap,'top'));
 		this.startMove(itemWrap,{'top':0});
 	}
 
